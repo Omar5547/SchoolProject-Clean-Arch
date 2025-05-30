@@ -1,0 +1,14 @@
+D:\WebApplication2025\DataAcessLayer\bin\Debug\net6.0\DataAcessLayer.deps.json
+D:\WebApplication2025\DataAcessLayer\bin\Debug\net6.0\DataAcessLayer.runtimeconfig.json
+D:\WebApplication2025\DataAcessLayer\bin\Debug\net6.0\DataAcessLayer.dll
+D:\WebApplication2025\DataAcessLayer\bin\Debug\net6.0\DataAcessLayer.pdb
+D:\WebApplication2025\DataAcessLayer\obj\Debug\net6.0\DataAcessLayer.csproj.AssemblyReference.cache
+D:\WebApplication2025\DataAcessLayer\obj\Debug\net6.0\DataAcessLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\WebApplication2025\DataAcessLayer\obj\Debug\net6.0\DataAcessLayer.AssemblyInfoInputs.cache
+D:\WebApplication2025\DataAcessLayer\obj\Debug\net6.0\DataAcessLayer.AssemblyInfo.cs
+D:\WebApplication2025\DataAcessLayer\obj\Debug\net6.0\DataAcessLayer.csproj.CoreCompileInputs.cache
+D:\WebApplication2025\DataAcessLayer\obj\Debug\net6.0\DataAcessLayer.dll
+D:\WebApplication2025\DataAcessLayer\obj\Debug\net6.0\refint\DataAcessLayer.dll
+D:\WebApplication2025\DataAcessLayer\obj\Debug\net6.0\DataAcessLayer.pdb
+D:\WebApplication2025\DataAcessLayer\obj\Debug\net6.0\DataAcessLayer.genruntimeconfig.cache
+D:\WebApplication2025\DataAcessLayer\obj\Debug\net6.0\ref\DataAcessLayer.dll
