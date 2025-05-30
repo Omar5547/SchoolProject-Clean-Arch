@@ -1,0 +1,33 @@
+﻿@model IEnumerable<ParentViewModel>
+
+@{
+    ViewData["Title"] = "Parent List";
+}
+<a asp-action="Create" class="btn btn-success">Create New Parent </a>
+<table class="table table-striped table-hover mt-3">
+    <thead>
+        <tr>
+            <td>@Html.DisplayNameFor(P => P.Name) </td>
+            <td>@Html.DisplayNameFor(P => P.PhoneNumber)</td>
+            <td>@Html.DisplayNameFor(P => P.Email)</td>
+           
+            <td>Details</td>
+            <td>Update</td>
+            <td>Delete</td>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Parent in Model)
+        {
+            <tr>
+                <td>@Parent.Name</td>
+                <td>@Parent.PhoneNumber</td>
+                <td>@Parent.Email</td>
+                <partial name="_ButtonsPartialView" model="@Parent.Id" />
+
+            </tr>
+
+        }
+    </tbody>
+</table>

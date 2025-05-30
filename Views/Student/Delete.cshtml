@@ -1,0 +1,29 @@
+﻿@model StudentViewModel
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+<form asp-action="Delete">
+
+<div class="form-group">
+        <label class="col-form-label" asp-for="name"></label>
+        <input readonly class="form-control" asp-for="name" />
+</div>
+<div class="form-group">
+        <label class="col-form-label" asp-for="Birthdate"></label>
+        <input readonly class="form-control" asp-for="Birthdate" />
+</div>
+    <div class="form-group">
+        <label>Class:</label>
+        <input class="form-control" value="@Model.Classes" readonly />
+    </div>
+
+    <div class="form-group">
+        <label>Parent:</label>
+        <input class="form-control" value="@Model.Parents" readonly />
+    </div>
+   
+    <input type="submit" value="Delete" class="btn btn-danger" />
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

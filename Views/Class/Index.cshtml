@@ -1,0 +1,31 @@
+﻿@model IEnumerable<ClassViewModel>
+
+@{
+    ViewData["Title"] = "Class List";
+}
+<a asp-action="Create" class="btn btn-success">Create New Class </a>
+<table class="table table-striped table-hover mt-3">
+    <thead>
+        <tr>
+            <td>@Html.DisplayNameFor(C => C.Name) </td>
+            <td>@Html.DisplayNameFor(C => C.TeacherName)</td>
+            <td>Details</td>
+            <td>Update</td>
+            <td>Delete</td>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Class in Model)
+        {
+            <tr>
+                <td>@Class.Name</td>
+                <td>@Class.TeacherName</td>
+               
+                <partial name="_ButtonsPartialView" model="@Class.Id" />
+                
+            </tr>
+
+        }
+    </tbody>
+</table>

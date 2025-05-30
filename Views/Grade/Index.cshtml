@@ -1,0 +1,34 @@
+﻿@model IEnumerable<GradeViewModel>
+
+@{
+    ViewData["Title"] = "Grade List";
+}
+<a asp-action="Create" class="btn btn-success">Create New Grades </a>
+<table class="table table-striped table-hover mt-3">
+    <thead>
+        <tr>
+            <td>@Html.DisplayNameFor(G => G.Subject) </td>
+            <td>@Html.DisplayNameFor(G => G.Score)</td>
+            <td>@Html.DisplayNameFor(G => G.Students)</td>
+
+
+            <td>Details</td>
+            <td>Update</td>
+            <td>Delete</td>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Grade in Model)
+        {
+            <tr>
+                <td>@Grade.Subject</td>
+                <td>@Grade.Score</td>
+                <td>@Grade.Students</td>
+                <partial name="_ButtonsPartialView" model="@Grade.Id" />
+
+            </tr>
+
+        }
+    </tbody>
+</table>

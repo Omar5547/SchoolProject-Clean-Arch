@@ -1,0 +1,20 @@
+﻿@model TeacherViewModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+<form asp-action="Details">
+
+    <div class="form-group">
+        <label class="col-form-label" asp-for="Name"></label>
+        <input readonly class="form-control" asp-for="Name" />
+    </div>
+    <div class="form-group">
+        <label class="col-form-label" asp-for="Subject"></label>
+        <input readonly class="form-control" asp-for="Subject" />
+    </div>
+
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-light">Edit</a>
+    <a asp-action="Index" class="btn btn-light">Back To List</a>
+</form>

@@ -1,0 +1,32 @@
+﻿@model GradeViewModel
+
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<h1> Create New Grade</h1>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label class="col-form-label" asp-for="Subject"></label>
+        <input class="form-control" asp-for="Subject" />
+        <span asp-validation-for="Subject" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label class="col-form-label" asp-for="Score"></label>
+        <input class="form-control" asp-for="Score" />
+        <span asp-validation-for="Score" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Student</label>
+        <select asp-for="StudentId" class="form-control" asp-items="ViewBag.Students"></select>
+        <span asp-validation-for="StudentId" class="text-danger"></span>
+    </div>
+
+    <input type="submit" value="submit" class="btn btn-primary" />
+    <a asp-action="Index" class="btn btn-light">Back To List</a>
+
+</form>

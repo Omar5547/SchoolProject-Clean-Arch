@@ -1,0 +1,36 @@
+﻿@model ClassViewModel
+
+
+@{
+    ViewData["Title"] = "Create";
+}
+@{
+    // استخدم ViewBag بدل inject
+    var teachers = ViewBag.Teachers as SelectList;
+}
+
+<h1> Create New Class</h1>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label class="col-form-label" asp-for="Name"></label>
+        <input class="form-control" asp-for="Name" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="TeacherId">Teacher</label>
+        <select asp-for="TeacherId" class="form-control" asp-items="ViewBag.Teachers">
+            <option value="">-- Select Teacher --</option>
+        </select>
+       
+
+        <span asp-validation-for="TeacherId" class="text-danger"></span>
+    </div>
+    <input type="submit" value="submit" class="btn btn-primary" />
+    <a asp-action="Index" class="btn btn-light">Back To List</a>
+
+</form>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

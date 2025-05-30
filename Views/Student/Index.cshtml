@@ -1,0 +1,34 @@
+﻿@model IEnumerable<StudentViewModel>
+
+@{
+    ViewData["Title"] = "Student List"; 
+}
+<a asp-action="Create" class="btn btn-success" >Create New Student </a>
+    <table class="table table-striped table-hover mt-3">
+        <thead>
+            <tr>
+                <td>@Html.DisplayNameFor(S =>S.name) </td>
+                <td>@Html.DisplayNameFor(S =>S.Birthdate )</td>
+                <td>@Html.DisplayNameFor(S => S.Parents)</td>
+                <td>@Html.DisplayNameFor(S => S.Classes)</td>
+                <td>Details</td>
+                <td>Update</td>
+                <td>Delete</td>
+                
+            </tr>
+        </thead>
+        <tbody>
+                @foreach (var Student in Model)
+        {
+            <tr>
+                <td>@Student.name</td>
+                <td>@Student.Birthdate</td>
+                <td>@Student.Parents</td>
+                <td>@Student.Classes </td>
+                <partial name="_ButtonsPartialView" model="@Student.id" />
+
+            </tr>
+             
+        }
+        </tbody>
+    </table>
